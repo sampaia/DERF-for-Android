@@ -12,14 +12,16 @@ import com.derf.adapter.ListAdapter;
 import com.derf.beans.ListItem;
 import com.derf.beans.News;
 
-public class TopNewsActivity extends ListActivity {
+public class ShowPhotoAlbumsActivity extends ListActivity {
 
 	/** Called when the activity is first created. */
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		// Create an array of Strings, that will be put to our ListActivity
-		ListItem n1 = new ListItem(4, "Really long this is a test for a really long long line and it is a test for a long line 1", "the date stuff would go here as well", "http://www.derfmagazine.com/_includes/functions/image.php/columnist-katieMichaels-plain.jpg?width=60&height=60&cropratio=1:1&image=/_images/columnists/columnist-katieMichaels-plain.jpg");		
-		ListItem n2 = new ListItem(5, "this is going to be the headline of the second item.", "subtext2", "http://www.derfmagazine.com/_includes/functions/image.php/columnist-katieMichaels-plain.jpg?width=60&height=60&cropratio=1:1&image=/_images/columnists/columnist-katieMichaels-plain.jpg");
+		ListItem n1 = new ListItem(4, "Really long this is a test for a really long long line and it is a test for a long line 1", "the date stuff would go here as well", 
+					"http://www.derfmagazine.com/_includes/functions/image.php/?width=65&height=65&cropratio=1:1&image=/_images/cincinnati/events/1260/1260_be98f57ec4652725457783b04a4d2a91_1241638678_31.jpg");		
+		ListItem n2 = new ListItem(5, "this is going to be the headline of the second item.", "subtext2", 
+					"http://www.derfmagazine.com/_includes/functions/image.php/?width=65&height=65&cropratio=1:1&image=/_images/cincinnati/events/1260/1260_be98f57ec4652725457783b04a4d2a91_1241638678_31.jpg");		
 		
 		ArrayList<ListItem> nl = new ArrayList<ListItem>();
 		nl.add(n1);

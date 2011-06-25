@@ -40,7 +40,7 @@
 	            android:drawableTop="@drawable/home_btn_topnews"/>
 	        <Button android:id="@+id/home_btn_categories"
 	            style="@style/HomeButton"
-	            android:onClick="onMapClick"
+	            android:onClick="onCategoriesClick"
 	            android:text="@string/btn_categories"
 	            android:drawableTop="@drawable/home_btn_categories"/>
 	    </LinearLayout>
@@ -52,12 +52,12 @@
 	        android:layout_weight="1">
 	        <Button android:id="@+id/home_btn_events"
 	            style="@style/HomeButton"
-	            android:onClick="onSessionsClick"
+	            android:onClick="onEventsClick"
 	            android:text="@string/btn_events"
 	            android:drawableTop="@drawable/home_btn_events"/>
 	        <Button android:id="@+id/home_btn_albums"
 	            style="@style/HomeButton"
-	            android:onClick="onStarredClick"
+	            android:onClick="onPhotoAlbumsClick"
 	            android:text="@string/btn_albums"
 	            android:drawableTop="@drawable/home_btn_albums"/>
 	    </LinearLayout>

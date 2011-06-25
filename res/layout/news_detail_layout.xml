@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   	android:layout_width="fill_parent"
+   	android:layout_height="fill_parent">
+   	
+   	<TextView android:text="@+id/headline" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/headline"
+		android:textSize="18px"
+		android:textStyle="bold"></TextView>
+		
+	<TextView android:text="@+id/subText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="12px"
+		android:id="@+id/subText"
+		android:layout_below="@id/headline"></TextView>
+		
+   	<ImageView android:id="@+id/icon" android:layout_height="wrap_content"
+		android:src="@drawable/icon" android:layout_width="192px"
+		android:layout_marginTop="2px" 
+		android:layout_marginBottom="2px"
+		android:layout_marginRight="4px"
+		android:layout_marginLeft="5px"
+		android:layout_below="@id/subText">
+	</ImageView>
+		
+	<TextView android:text="@+id/articleText" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/articleText"
+		android:textSize="10px"
+		android:layout_below="@id/icon"></TextView>	
+	
+	<TextView android:text="@+id/idValue" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/idValue"
+		android:visibility="gone"></TextView>	
+		   	
+</RelativeLayout>
+
+
+

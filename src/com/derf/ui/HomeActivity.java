@@ -30,4 +30,22 @@ public class HomeActivity extends Activity{
         // Launch overall conference schedule
         startActivity(new Intent(this, TopNewsActivity.class));
     }
+    
+    /** Handle "categories" action. */
+    public void onCategoriesClick(View v) {
+        // Launch overall conference schedule
+        startActivity(new Intent(this, ShowCategoriesActivity.class));
+    }
+    
+    /** Handle "events" action. */
+    public void onEventsClick(View v) {
+        // Launch overall conference schedule
+        startActivity(new Intent(this, ShowEventsActivity.class));
+    }   
+
+    /** Handle "photo albums" action. */
+    public void onPhotoAlbumsClick(View v) {
+        // Launch overall conference schedule
+        startActivity(new Intent(this, ShowPhotoAlbumsActivity.class));
+    }       
 }
