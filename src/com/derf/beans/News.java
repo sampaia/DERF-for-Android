@@ -1,6 +1,8 @@
 package com.derf.beans;
 
-public class News {
+import java.io.Serializable;
+
+public class News implements Serializable{
 
 	private int id;
 	private String headline;
@@ -9,7 +11,13 @@ public class News {
 	private String thumbnailURL;
 	
 	public News(){}
-
+	public News(int id, String headline, String text, String imageURL){
+		this.id = id;
+		this.headline = headline;
+		this.text = text;
+		this.imageURL = imageURL;
+	}
+	
 	public int getId() {
 		return id;
 	}

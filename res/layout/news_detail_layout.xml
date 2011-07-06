@@ -4,12 +4,35 @@
    	android:layout_width="fill_parent"
    	android:layout_height="fill_parent">
    	
+   	<LinearLayout android:id="@+id/header"
+   	    android:orientation="vertical"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+    	
+		<LinearLayout style="@style/TitleBar">
+			<ImageView style="@style/TitleBarLogo"
+				android:contentDescription="@string/description_logo" 
+				android:paddingLeft="15px"
+				android:src="@drawable/title_logo" />
+	
+			<View style="@style/TitleBarSpring" />
+	        <ImageView style="@style/TitleBarSeparator" />
+	
+			<ImageButton style="@style/TitleBarAction"
+				android:contentDescription="@string/description_home" 
+				android:src="@drawable/ic_title_home"
+				android:onClick="onHomeClick" />
+		</LinearLayout>
+
+	</LinearLayout>
+   	
    	<TextView android:text="@+id/headline" 
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content" 
 		android:id="@+id/headline"
 		android:textSize="18px"
-		android:textStyle="bold"></TextView>
+		android:textStyle="bold"
+		android:layout_below="@id/header"></TextView>
 		
 	<TextView android:text="@+id/subText"
 		android:layout_width="wrap_content"
@@ -24,7 +47,8 @@
 		android:layout_marginBottom="2px"
 		android:layout_marginRight="4px"
 		android:layout_marginLeft="5px"
-		android:layout_below="@id/subText">
+		android:layout_below="@id/subText"
+		android:layout_centerHorizontal="true">
 	</ImageView>
 		
 	<TextView android:text="@+id/articleText" 

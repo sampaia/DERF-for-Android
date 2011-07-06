@@ -39,7 +39,7 @@ public class CategoryListAdapter extends ArrayAdapter<ListItem> {
 		View rowView = convertView;
 		if (rowView == null) {
 			LayoutInflater inflater = context.getLayoutInflater();
-			rowView = inflater.inflate(R.layout.categorylayout, null, true);
+			rowView = inflater.inflate(R.layout.categorylayout, parent, false);
 			holder = new ViewHolder();
 			holder.textView = (TextView) rowView.findViewById(R.id.mainText);
 			holder.idView = (TextView) rowView.findViewById(R.id.rowIdValue);

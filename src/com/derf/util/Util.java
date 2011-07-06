@@ -6,8 +6,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 
 public class Util {
 
@@ -23,7 +26,8 @@ public class Util {
 		return bitmap;
 	}
 
-	public static InputStream OpenHttpConnection(String strURL) throws IOException {
+	public static InputStream OpenHttpConnection(String strURL)
+			throws IOException {
 		InputStream inputStream = null;
 		URL url = new URL(strURL);
 		URLConnection conn = url.openConnection();
@@ -41,5 +45,27 @@ public class Util {
 		}
 		return inputStream;
 	}
+
+	public static Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
+		int width = bm.getWidth();
+		int height = bm.getHeight();
+		float scaleWidth = ((float) newWidth) / width;
+		float scaleHeight = ((float) newHeight) / height;
+
+		// create a matrix for the manipulation
+		Matrix matrix = new Matrix();
+		// resize the bit map
+		matrix.postScale(scaleWidth, scaleHeight);
+		// recreate the new Bitmap
+		Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height,
+				matrix, false);
+		return resizedBitmap;
+	}
+	
+    public static void goHome(Context context) {
+        final Intent intent = new Intent(context, com.derf.ui.HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        context.startActivity(intent);
+    }
 
 }

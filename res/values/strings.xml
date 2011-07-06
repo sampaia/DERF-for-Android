@@ -21,12 +21,15 @@
 	
 	<!-- Home Action Strings -->
 	<string name="description_logo">DERF</string>
+	<string name="description_home">Home Screen</string>
 	<string name="description_refresh">Refresh</string>
 	<string name="btn_topnews">Top News</string>
 	<string name="btn_categories">Categories</string>
 	<string name="btn_events">Events</string>
 	<string name="btn_albums">Albums</string>
 	<string name="happy_hour_loading">Happy Hour Loading</string>
+	<string name="happy_hour_text">derf happy hour</string>
+	
 	
 	
 

@@ -3,6 +3,7 @@ package com.derf.ui;
 import java.util.ArrayList;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import com.derf.adapter.CategoryListAdapter;
 import com.derf.beans.ListItem;
+import com.derf.util.Util;
 
 public class ShowCategoriesActivity extends ListActivity {
 	
@@ -17,6 +19,9 @@ public class ShowCategoriesActivity extends ListActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 
+        setContentView(com.derf.R.layout.header_frame_layout);
+
+		
 		ArrayList<ListItem> nl = new ArrayList<ListItem>();
 
 		nl.add(new ListItem(1, "Sports"));
@@ -36,8 +41,19 @@ public class ShowCategoriesActivity extends ListActivity {
 		// Get the item that was clicked
 		ListItem o = (ListItem) this.getListAdapter().getItem(position);
 		String keyword = o.toString();
-		Toast.makeText(this, "You selected: " + o.getText() + "    " + o.getId(), Toast.LENGTH_LONG)
-				.show();
+		
+		Intent i = new Intent(this, TopNewsActivity.class);
+		i.putExtra("category", o.getText());
+		
+		startActivity(i);
+		
+		
+		//Toast.makeText(this, "You selected: " + o.getText() + "    " + o.getId(), Toast.LENGTH_LONG)
+		//		.show();
+	}
+	
+	public void onHomeClick(View v){
+		Util.goHome(this);
 	}
 
 }

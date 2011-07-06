@@ -2,85 +2,83 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/home_root"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
+	android:id="@+id/home_root" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
 
 	<LinearLayout style="@style/TitleBar">
-	    <ImageView style="@style/TitleBarLogo"
-	        android:contentDescription="@string/description_logo"
-	        android:src="@drawable/title_logo" />
-	
-	    <View style="@style/TitleBarSpring" />
-	
-	    <ImageView style="@style/TitleBarSeparator" />
-	    <ProgressBar style="@style/TitleBarProgressIndicator"
-	        android:id="@+id/title_refresh_progress"
-	        android:visibility="gone" />
+		<ImageView style="@style/TitleBarLogo"
+			android:contentDescription="@string/description_logo"
+			android:paddingLeft="15px" android:src="@drawable/title_logo" />
+
+		<View style="@style/TitleBarSpring" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<ProgressBar style="@style/TitleBarProgressIndicator"
+			android:id="@+id/title_refresh_progress" android:visibility="gone" />
 	</LinearLayout>
-	
-	<LinearLayout
-	    android:orientation="vertical"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_weight="1"
-	    android:padding="6dip">
-	    
-	    <LinearLayout
-	        android:orientation="horizontal"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="1">
-	        <Button android:id="@+id/home_btn_topnews"
-	            style="@style/HomeButton"
-	            android:onClick="onTopNewsClick"
-	            android:text="@string/btn_topnews"
-	            android:drawableTop="@drawable/home_btn_topnews"/>
-	        <Button android:id="@+id/home_btn_categories"
-	            style="@style/HomeButton"
-	            android:onClick="onCategoriesClick"
-	            android:text="@string/btn_categories"
-	            android:drawableTop="@drawable/home_btn_categories"/>
-	    </LinearLayout>
-	
-	    <LinearLayout
-	        android:orientation="horizontal"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="1">
-	        <Button android:id="@+id/home_btn_events"
-	            style="@style/HomeButton"
-	            android:onClick="onEventsClick"
-	            android:text="@string/btn_events"
-	            android:drawableTop="@drawable/home_btn_events"/>
-	        <Button android:id="@+id/home_btn_albums"
-	            style="@style/HomeButton"
-	            android:onClick="onPhotoAlbumsClick"
-	            android:text="@string/btn_albums"
-	            android:drawableTop="@drawable/home_btn_albums"/>
-	    </LinearLayout>
-	    
-	    <LinearLayout
-	        android:id="@+id/derf_happy_hour"
-	        android:layout_width="fill_parent"
-	        android:layout_height="@dimen/happy_hour_height"
-	        android:orientation="horizontal"
-	        android:background="#eee"
-	        android:gravity="center">
-        <ProgressBar
-            style="?android:attr/progressBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="6dip"
-            android:indeterminate="true"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size_small"
-            android:text="@string/happy_hour_loading"/>
-    </LinearLayout>
-	</LinearLayout>   
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_weight="1" android:padding="6dip">
+
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+			<Button android:id="@+id/home_btn_topnews" style="@style/HomeButton"
+				android:onClick="onTopNewsClick" android:text="@string/btn_topnews"
+				android:drawableTop="@drawable/home_btn_topnews" />
+			<Button android:id="@+id/home_btn_categories" style="@style/HomeButton"
+				android:onClick="onCategoriesClick" android:text="@string/btn_categories"
+				android:drawableTop="@drawable/home_btn_categories" />
+		</LinearLayout>
+
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+			<Button android:id="@+id/home_btn_events" style="@style/HomeButton"
+				android:onClick="onEventsClick" android:text="@string/btn_events"
+				android:drawableTop="@drawable/home_btn_events" />
+			<Button android:id="@+id/home_btn_albums" style="@style/HomeButton"
+				android:onClick="onPhotoAlbumsClick" android:text="@string/btn_albums"
+				android:drawableTop="@drawable/home_btn_albums" />
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/derf_happy_hour"
+			android:layout_width="fill_parent" android:layout_height="@dimen/happy_hour_height"
+			android:orientation="horizontal" android:background="#eee"
+			android:onClick="onHappyHourClick">
+			
+		   	<ImageView android:id="@+id/icon" android:layout_height="wrap_content"
+				android:src="@drawable/icon" android:layout_width="90dip"
+				android:layout_marginTop="2px" 
+				android:layout_marginBottom="2px"
+				android:layout_marginRight="5px"
+				android:layout_marginLeft="5px">
+			</ImageView>
+			
+			<RelativeLayout
+   				android:layout_width="fill_parent"
+   				android:layout_height="fill_parent">
+			
+				<TextView android:layout_width="wrap_content"
+					android:id="@+id/head"
+					android:layout_height="wrap_content" 
+					android:textSize="@dimen/text_size_medium"
+					android:text="@string/happy_hour_text" 
+					android:textColor="#354EA2"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:textSize="@dimen/text_size_small"
+					android:id="@+id/happyHourDate" 
+					android:layout_below="@id/head"
+					android:textColor="#354EA2"/>	
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:textSize="@dimen/text_size_small"
+					android:id="@+id/happyHourInfo" 
+					android:layout_below="@id/happyHourDate"
+					android:textColor="#354EA2"/>
+				
+			</RelativeLayout>	
+		</LinearLayout>
+	</LinearLayout>
 
 </LinearLayout>
