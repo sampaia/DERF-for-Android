@@ -18,7 +18,9 @@
 	<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
 	<uses-permission android:name="android.permission.INTERNET" />
 
-	<application android:label="" android:theme="@android:style/Theme.NoTitleBar">
+	<application android:label="DERF Mobile" 
+		android:theme="@android:style/Theme.NoTitleBar">
+		
 		<activity android:name=".ui.HomeActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
