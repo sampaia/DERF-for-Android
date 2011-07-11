@@ -2,6 +2,7 @@ package com.derf.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
@@ -14,6 +15,8 @@ import android.graphics.Matrix;
 
 public class Util {
 
+	public static long FILE_TIMEOUT = 43200000;
+	
 	public static Bitmap LoadImage(String URL, BitmapFactory.Options options) {
 		Bitmap bitmap = null;
 		InputStream in = null;
@@ -67,5 +70,21 @@ public class Util {
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         context.startActivity(intent);
     }
+
+    public static void CopyStream(InputStream is, OutputStream os){
+        final int buffer_size=1024;
+        try
+        {
+            byte[] bytes=new byte[buffer_size];
+            for(;;)
+            {
+              int count=is.read(bytes, 0, buffer_size);
+              if(count==-1)
+                  break;
+              os.write(bytes, 0, count);
+            }
+        }
+        catch(Exception ex){}
+    }    
 
 }

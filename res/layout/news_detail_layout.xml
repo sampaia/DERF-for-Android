@@ -25,14 +25,22 @@
 		</LinearLayout>
 
 	</LinearLayout>
+	
+	
+	<ScrollView
+	    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/header">
+	<RelativeLayout
+	    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
    	
    	<TextView android:text="@+id/headline" 
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content" 
 		android:id="@+id/headline"
 		android:textSize="18px"
-		android:textStyle="bold"
-		android:layout_below="@id/header"></TextView>
+		android:textStyle="bold"></TextView>
 		
 	<TextView android:text="@+id/subText"
 		android:layout_width="wrap_content"
@@ -63,6 +71,9 @@
 		android:layout_height="wrap_content" 
 		android:id="@+id/idValue"
 		android:visibility="gone"></TextView>	
+		
+	</RelativeLayout>
+	</ScrollView>
 		   	
 </RelativeLayout>
 

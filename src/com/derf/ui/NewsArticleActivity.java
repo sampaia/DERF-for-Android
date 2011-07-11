@@ -1,8 +1,15 @@
 package com.derf.ui;
 
+import java.io.ByteArrayInputStream;
+import java.net.URLDecoder;
+
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -37,10 +44,16 @@ public class NewsArticleActivity extends Activity{
         News n = (News) getIntent().getExtras().get("news");
         
         if(n != null){
+            //ByteArrayInputStream bytes = new ByteArrayInputStream(n.getImageBitmap());
+            //BitmapDrawable bmd = new BitmapDrawable(bytes);
+            //Bitmap bm = bmd.getBitmap();
+            
         	headline.setText(n.getHeadline());
-        	subText.setText("subtext goes here");
-        	img.setImageBitmap(Util.LoadImage(n.getImageURL(), null));
-        	articleText.setText(n.getText());
+        	subText.setText(n.getDate().toString());
+        	//img.setImageBitmap(BitmapFactory.decodeByteArray(n.getImageBitmap(), 0, n.getImageBitmap().length));
+        	img.setImageBitmap(Util.LoadImage(URLDecoder.decode(n.getImageURL()), null));
+        	//img.setImageBitmap(bm);
+        	articleText.setText(Html.fromHtml(n.getText()));
         }       
         setContentView(newsView);
         

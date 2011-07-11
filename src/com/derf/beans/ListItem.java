@@ -1,11 +1,14 @@
 package com.derf.beans;
 
+import android.graphics.Bitmap;
+
 public class ListItem {
 
 	private int id;
 	private String text;
 	private String subText;
 	private String imageURL;
+	private Bitmap imageBitmap;
 	
 	public ListItem(){}
 	
@@ -56,6 +59,14 @@ public class ListItem {
 
 	public void setSubText(String subText) {
 		this.subText = subText;
+	}
+
+	public Bitmap getImageBitmap() {
+		return imageBitmap;
+	}
+
+	public void setImageBitmap(Bitmap imageBitmap) {
+		this.imageBitmap = imageBitmap;
 	}
 	
 }

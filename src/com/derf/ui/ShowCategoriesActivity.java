@@ -30,7 +30,7 @@ public class ShowCategoriesActivity extends ListActivity {
 		nl.add(new ListItem(4, "Entertainment"));
 		nl.add(new ListItem(5, "Politics"));
 		nl.add(new ListItem(6, "Classics"));
-		nl.add(new ListItem(7, "Music"));
+		//nl.add(new ListItem(7, "Music"));
 
 		this.setListAdapter(new CategoryListAdapter(this, nl));
 	}
@@ -43,7 +43,7 @@ public class ShowCategoriesActivity extends ListActivity {
 		String keyword = o.toString();
 		
 		Intent i = new Intent(this, TopNewsActivity.class);
-		i.putExtra("category", o.getText());
+		i.putExtra("category", o.getId());
 		
 		startActivity(i);
 		

@@ -29,6 +29,9 @@ public class ShowPhotoAlbumsActivity extends ListActivity {
 		ListItem n2 = new ListItem(5, "this is going to be the headline of the second item.", "subtext2", 
 					"http://www.derfmagazine.com/_includes/functions/image.php/?width=65&height=65&cropratio=1:1&image=/_images/cincinnati/events/1260/1260_be98f57ec4652725457783b04a4d2a91_1241638678_31.jpg");		
 		
+		n1.setImageBitmap(Util.LoadImage(n1.getImageURL(), null));
+		n2.setImageBitmap(Util.LoadImage(n2.getImageURL(), null));
+
 		ArrayList<ListItem> nl = new ArrayList<ListItem>();
 		nl.add(n1);
 		nl.add(n2);

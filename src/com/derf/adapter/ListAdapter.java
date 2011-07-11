@@ -55,7 +55,9 @@ public class ListAdapter extends ArrayAdapter<ListItem> {
 		holder.textView.setText(Html.fromHtml(items.get(position).getText()));	
 		holder.subTextView.setText(Html.fromHtml(items.get(position).getSubText()));
 		holder.idView.setText(Integer.toString(items.get(position).getId()));
-		holder.imageView.setImageBitmap(Util.LoadImage(items.get(position).getImageURL(), null));
+		holder.imageView.setImageBitmap(items.get(position).getImageBitmap());
+
+		//holder.imageView.setImageBitmap(Util.LoadImage(items.get(position).getImageURL(), null));
 		//holder.imageView.setImageBitmap(Util.LoadImage("http://www.derfmagazine.com/_includes/functions/image.php/columnist-katieMichaels-plain.jpg?width=60&height=60&cropratio=1:1&image=/_images/columnists/columnist-katieMichaels-plain.jpg", null));
 		return rowView;
 	}

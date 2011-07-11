@@ -25,6 +25,9 @@ public class ShowEventsActivity extends ListActivity {
 		ListItem n1 = new ListItem(4, "Really long this is a test for a really long long line and it is a test for a long line 1", "the date stuff would go here as well", "http://www.derfmagazine.com/_includes/functions/image.php/FrankyFridays%5B1%5D?width=100&height=100&cropratio=3:2&image=/_images/cincinnati/events/2777/FrankyFridays[1]");		
 		ListItem n2 = new ListItem(5, "this is going to be the headline of the second item.", "subtext2", "http://www.derfmagazine.com/_includes/functions/image.php/FrankyFridays%5B1%5D?width=100&height=100&cropratio=3:2&image=/_images/cincinnati/events/2777/FrankyFridays[1]");
 		
+		n1.setImageBitmap(Util.LoadImage(n1.getImageURL(), null));
+		n2.setImageBitmap(Util.LoadImage(n2.getImageURL(), null));
+
 		ArrayList<ListItem> nl = new ArrayList<ListItem>();
 		nl.add(n1);
 		nl.add(n2);
