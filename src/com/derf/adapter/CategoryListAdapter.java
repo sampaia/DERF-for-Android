@@ -18,7 +18,7 @@ import com.derf.util.Util;
 public class CategoryListAdapter extends ArrayAdapter<ListItem> {
 	private final Activity context;
 	private final ArrayList<ListItem> items;
-
+     
 	public CategoryListAdapter(Activity context, ArrayList<ListItem> items) {
 		super(context, R.layout.rowlayout, items);
 		this.context = context;
